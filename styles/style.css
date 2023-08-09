@@ -1,0 +1,296 @@
+/* create by Omar Abu Snineh */
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* save some color var */
+:root {
+  --main-color: rgb(82 215 223);
+}
+span {
+  color: var(--main-color);
+}
+
+/* create header of page*/
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  color: white;
+}
+header ul li {
+  list-style-type: none;
+  display: inline;
+  margin: 0 15px;
+  font-weight: bold;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+header h1 {
+  cursor: pointer;
+}
+
+/*  Menu Hover Effect */
+header a::after,
+header a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0.2rem;
+  background-color: var(--main-color);
+  transition: 0.5s;
+}
+header a::after {
+  top: -3px;
+  right: 0px;
+}
+header a::before {
+  bottom: -3px;
+}
+header a:hover::after,
+header a:hover::before {
+  width: 100%;
+}
+.nav-active {
+  color: var(--main-color);
+}
+
+/* create main of page*/
+main {
+  min-height: 92vh;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  position: relative;
+}
+main h1 {
+  font-size: 3rem;
+}
+.background {
+  background-color: black;
+  background-image: url("../assets/bk3.png");
+  background-size: cover;
+}
+.main-info {
+  line-height: 4rem;
+  position: absolute;
+  right: 21rem;
+  top: 15rem;
+}
+.main-info > h1 {
+  text-shadow: 4px 4px 4px rgb(0 129 167 / 29%);
+}
+.main-img {
+  width: 23rem;
+  height: 23rem;
+  background-color: crimson;
+  background-image: url("../assets/1.jpg");
+  background-size: cover;
+  border-radius: 12%;
+  position: absolute;
+  top: 9rem;
+  left: 15rem;
+}
+
+/* create article*/
+article {
+  background-image: url("../assets/bk7.jpg");
+  height: 100vh;
+  overflow: hidden;
+}
+figure {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row-reverse;
+  align-content: center;
+}
+figcaption {
+  width: 35rem;
+  line-height: 1.8rem;
+}
+button.cv {
+  width: 180px;
+  height: 52px;
+  padding: 10px;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  border-radius: 0.3rem;
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: medium;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.448);
+  margin-top: 2rem;
+  box-shadow: 4px 4px 4px rgb(0 129 167 / 29%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+button.cv:hover {
+  color: var(--main-color);
+  background-color: rgb(144 98 87 / 49%);
+  transform: scale(1.1);
+}
+
+/* direct chiled */
+article figure > img {
+  width: 450px;
+  height: 80vh;
+  border-radius: 0.3rem;
+  background-size: cover;
+  margin-top: 4.66rem;
+}
+article figcaption > h2 {
+  font-size: 2.4rem;
+  text-shadow: 4px 4px 4px rgb(0 129 167 / 29%);
+  margin-bottom: 1.3rem;
+  margin-left: 0.2rem;
+}
+article figcaption > h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-shadow: 2px 2px 3px rgb(0 129 167 / 29%);
+}
+article figcaption > p {
+  font-size: 1.4rem;
+  color: white;
+  text-shadow: 2px 2px 3px rgb(0 129 167 / 29%);
+}
+
+/* create section cards */
+section {
+  height: 100vh;
+  background-image: url("../assets/14.jpg");
+}
+section h2 {
+  font-size: 2.4rem;
+  text-shadow: 4px 4px 4px rgb(0 129 167 / 29%);
+  margin-left: 0.2rem;
+  margin-left: 15rem;
+  padding-top: 6rem;
+}
+section h1 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 3px rgb(0 129 167 / 29%);
+  margin-left: 15rem;
+  margin-bottom: 5rem;
+}
+.services {
+  height: 40%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.card {
+  width: 20%;
+  min-height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  background-image: url("../assets/12.jpg");
+}
+i {
+  font-size: 50px !important;
+  color: var(--main-color);
+  text-shadow: 2px 2px 3px rgb(0 129 167 / 29%);
+}
+.card h3 {
+  font-size: larger;
+  margin-top: 1rem;
+  color: white;
+}
+.card p {
+  padding: 0.5rem 1.5rem;
+  font-size: medium;
+  color: white;
+  text-align: center;
+}
+button.card {
+  height: 3rem;
+  width: 8rem;
+  border: none;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background-image: none;
+  background-color: var(--main-color);
+  transition: 0.4s;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 4px rgb(0 129 167 / 29%);
+}
+button.card:hover {
+  background-color: rgb(144 98 87 / 49%);
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  text-shadow: 2px 2px 3px rgb(0 129 167 / 29%);
+  transform: scale(1.1);
+}
+
+/*  create footer  */
+footer {
+  background-image: linear-gradient(rgb(217 0 0 / 36%), #57949ecc);
+}
+footer .footer-up,
+footer .footer-down {
+  height: 40vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  opacity: 0.8;
+  text-shadow: 3px 3px 3px rgba(17, 18, 18, 0.4);
+}
+footer button {
+  width: 180px;
+  height: 52px;
+  padding: 10px;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  border-radius: 0.3rem;
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: medium;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.448);
+  margin-top: 2rem;
+  box-shadow: 4px 4px 4px rgb(0 129 167 / 29%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+footer button:hover {
+  color: var(--main-color);
+  background-color: rgb(144 98 87 / 49%);
+  transform: scale(1.1);
+}
+.links i {
+  color: rgba(99, 245, 255, 0.902);
+}
