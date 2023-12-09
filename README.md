@@ -1,4 +1,4 @@
-# protfolio-OmarAbuSnineh
+# Portfolio-OmarAbuSnineh
 
 # Using HTML and CSS 
 
